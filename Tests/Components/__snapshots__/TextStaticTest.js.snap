@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextStatic component renders correctly if text and styleText is set 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#fff",
+    }
+  }
+>
+  Hello world
+</Text>
+`;
+
+exports[`TextStatic component renders correctly if text prop is set 1`] = `
+<Text>
+  Hello world
+</Text>
+`;
+
+exports[`TextStatic component renders correctly if text prop no set 1`] = `<Text />`;
