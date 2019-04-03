@@ -9,7 +9,6 @@
 
 import React from 'react';
 import {
-  View,
   Text,
   Image,
   TouchableOpacity
@@ -31,4 +30,14 @@ const Button = (props) => (
 
 export default Button;
 
-Button.propTypes = {};
+Button.propTypes = {
+  styleButton: PropTypes.instanceOf(Object),
+  onPress: PropTypes.func,
+  styleTitle: PropTypes.instanceOf(Object),
+  title: PropTypes.string,
+  sourceBtnImage: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string
+  ]),
+  styleBtnImage: PropTypes.instanceOf(Object)
+};
