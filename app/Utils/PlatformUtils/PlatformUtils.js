@@ -9,11 +9,11 @@ const isIOS = () => Platform.OS === 'ios';
 const isAndroid = () => Platform.OS === 'android';
 
 const isIphoneX = () => {
-  let ratio = deviceHeight / deviceWidth
+  let ratio = deviceHeight / deviceWidth;
   if (deviceWidth > deviceHeight) {
-    ratio = deviceWidth / deviceHeight
+    ratio = deviceWidth / deviceHeight;
   }
-  return (isIOS() && ratio >= 2.0)
+  return (isIOS() && ratio >= 2.0);
 };
 
 export {

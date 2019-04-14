@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { View, Image } from 'react-native';
 import get from 'lodash/get';
 import { Transition } from 'react-navigation-fluid-transitions';
@@ -33,8 +34,12 @@ class Chekcout extends Component {
           />
         </Transition>
       </View>
-    )
+    );
   }
 }
 
 export default Chekcout;
+
+Chekcout.propTypes = {
+  navigation: PropTypes.shape({})
+};

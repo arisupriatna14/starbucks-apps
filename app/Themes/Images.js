@@ -8,6 +8,6 @@ const Images = {
   icSearch: require('../Assets/Images/ic_search.png'),
   icBack: require('../Assets/Images/ic_back.png'),
   coffeeBag: require('../Assets/Images/ic_coffe_bag.png')
-}
+};
 
 export { Images };

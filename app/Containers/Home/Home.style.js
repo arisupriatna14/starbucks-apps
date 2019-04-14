@@ -1,6 +1,6 @@
-import { deviceWidth } from "../../Utils/PlatformUtils/PlatformUtils";
-import { Colors } from "../../Themes/Colors";
-import { StylesGlobal } from "../../Themes/StyleGlobal";
+import { deviceWidth } from '../../Utils/PlatformUtils/PlatformUtils';
+import { Colors } from '../../Themes/Colors';
+import { StylesGlobal } from '../../Themes/StyleGlobal';
 
 const Styles = {
   container: {
@@ -32,7 +32,7 @@ const Styles = {
     shadowColor: Colors.SCORPION,
     shadowRadius: 5,
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.4,
+    shadowOpacity: 0.4
   },
   textItemName: {
     color: Colors.WHITE,
@@ -41,7 +41,7 @@ const Styles = {
   },
   textItemPrice: {
     color: Colors.SALEM,
-    fontSize: 14,
+    fontSize: 14
   },
   viewDescription: {
     ...StylesGlobal.marginTop(16),

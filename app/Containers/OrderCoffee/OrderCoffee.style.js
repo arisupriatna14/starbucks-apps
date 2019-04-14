@@ -1,6 +1,6 @@
-import { Colors } from "../../Themes/Colors";
-import { StylesGlobal } from "../../Themes/StyleGlobal";
-import { deviceWidth } from "../../Utils/PlatformUtils/PlatformUtils";
+import { Colors } from '../../Themes/Colors';
+import { StylesGlobal } from '../../Themes/StyleGlobal';
+import { deviceWidth } from '../../Utils/PlatformUtils/PlatformUtils';
 
 const Styles = {
   container: {

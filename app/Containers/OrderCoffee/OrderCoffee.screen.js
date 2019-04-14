@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import { Transition } from 'react-navigation-fluid-transitions';
 import get from 'lodash/get';
+import PropTypes from 'prop-types';
 
 import { Styles } from './OrderCoffee.style';
 import { StylesGlobal } from '../../Themes/StyleGlobal';
@@ -24,7 +25,7 @@ class OrderCoffee extends Component {
   onChangeInput = field => (value) => {
     this.setState({
       [field]: value
-    })
+    });
   };
   
   navigateToScreen = (image, shared) => () => {
@@ -74,8 +75,14 @@ class OrderCoffee extends Component {
           </View>
         </TouchableOpacity>
       </View>
-    )
+    );
   }
 }
 
 export default OrderCoffee;
+
+OrderCoffee.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func
+  })
+};

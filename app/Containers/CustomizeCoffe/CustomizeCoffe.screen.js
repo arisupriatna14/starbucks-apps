@@ -28,7 +28,7 @@ class CustomizeCoffe extends Component {
         price: 1.3
       }, {
         name: 'Heavy Cream',
-        price: 1.5,
+        price: 1.5
       }, {
         name: 'Soy',
         price: 2.0
@@ -52,13 +52,13 @@ class CustomizeCoffe extends Component {
   }
 
   onPressSelectSize = size => () => {
-    this.setState({ selectSize: size })
+    this.setState({ selectSize: size });
   }
 
   onPressSelectMilk = type => () => {
     const { listMilk } = this.state;
     this.setState({ selectMilk: type }, () => {
-      this.totalPrice(listMilk[type].price)
+      this.totalPrice(listMilk[type].price);
     });
   }
 
@@ -71,7 +71,7 @@ class CustomizeCoffe extends Component {
     const { totalPriceCoffee, selectSize } = this.state;
     this.setState({ 
       totalPriceCoffee: totalPriceCoffee + priceMilk + selectSize
-    })
+    });
   };
 
   renderListMilk = ({ item, index }) => {
@@ -217,7 +217,7 @@ class CustomizeCoffe extends Component {
           </TouchableOpacity>
         </View>
       </View>
-    )
+    );
   }
 }
 

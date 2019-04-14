@@ -13,10 +13,10 @@ const Styles = {
     width: deviceWidth,
     ...Platform.select({
       ios: {
-        height: isIphoneX() ? 80 : 75,
+        height: isIphoneX() ? 80 : 75
       },
       android: {
-        height: 60,
+        height: 60
       }
     }),
     backgroundColor: Colors.SALEM,
@@ -30,7 +30,7 @@ const Styles = {
         top: isIphoneX() ? 15 : 5
       },
       android: {
-        top: 0,
+        top: 0
       }
     }),
     left: 5
@@ -43,7 +43,7 @@ const Styles = {
     shadowColor: Colors.SCORPION,
     shadowRadius: 5,
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.4,
+    shadowOpacity: 0.4
   },
   sizeImage: {
     // width: deviceHeight > 800 ? deviceWidth - 90 : deviceWidth - 140,
@@ -55,7 +55,7 @@ const Styles = {
       },
       ios: {
         width: deviceWidth - 140,
-        height: 320,
+        height: 320
       }
     }),
     bottom: 50
@@ -70,7 +70,7 @@ const Styles = {
   },
   textPrice: {
     color: Colors.SALEM,
-    fontSize: 24,
+    fontSize: 24
   },
   rowCenter: {
     flexDirection: 'row',

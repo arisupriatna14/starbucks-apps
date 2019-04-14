@@ -39,8 +39,8 @@ class Home extends Component {
 
   navigateToScreen = (item) => () => {
     const { navigation } = this.props;
-    navigation.navigate('Customize', { item })
-  }
+    navigation.navigate('Customize', { item });
+  };
 
   renderItem = ({ item, index }) => {
     return (
@@ -91,8 +91,8 @@ class Home extends Component {
           </View>
         </View>
       </View>
-    )
-  }
+    );
+  };
 
   render() {
     const { data } = this.state;
@@ -115,10 +115,14 @@ class Home extends Component {
           contentContainerStyle={StylesGlobal.top(24)}
         />
       </View>
-    )
+    );
   }
 }
 
 export default Home;
 
-Home.propTypes = {};
+Home.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func
+  })
+};

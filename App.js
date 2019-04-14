@@ -29,6 +29,11 @@ const NavigatorTranslation = FluidNavigator({
 const RootApps = createAppContainer(NavigatorTranslation);
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   render() {
     return (
       <RootApps />

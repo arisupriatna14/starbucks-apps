@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Text } from 'react-native';
 
-const TextStatic = (props) => (
-  <Text style={props.styleText}>
-    {props.text}
+const TextStatic = ({ styleText, text }) => (
+  <Text style={styleText}>
+    {text}
   </Text>
 );
 

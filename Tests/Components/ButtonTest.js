@@ -21,11 +21,15 @@ test('Button component renders correctly if title and image props set', () => {
 });
 
 test('Button component renders correctly if title, images, and onPress is set', () => {
+  function onPress() {
+    window.alert('Terpanggil');
+  }
+
   const tree = renderer.create(
     <Button
       title="Ini Button Title"
       sourceBtnImage={Images.icSearch}
-      onPress={() => window.alert('Terpanggil')}
+      onPress={onPress}
     />
   ).toJSON();
   expect(tree).toMatchSnapshot();
@@ -40,8 +44,8 @@ describe('Button Component', () => {
   });
 
   it('Will renders if title and onPress is set', () => {
-    const onPress = () => {
-      console.log('Button Clicked');
+    function onPress() {
+      window.alert('Button Clicked');
     }
 
     const testRenderer = renderer.create(
@@ -60,8 +64,8 @@ describe('Button Component', () => {
   });
 
   it('Will renders if title, onPress, and icon button is set', () => {
-    const onPress = () => {
-      console.log('Button Clicked');
+    function onPress() {
+      window.alert('Button Clicked');
     }
 
     const testRenderer = renderer.create(
@@ -84,6 +88,6 @@ describe('Button Component', () => {
     // check validation prop types
     expect(typeof testInstance.props.title).toBe('string');
     expect(typeof testInstance.props.onPress).toBe('function');
-    expect(typeof testInstance.props.sourceBtnImage).toBe('object')
+    expect(typeof testInstance.props.sourceBtnImage).toBe('object');
   });
-})
+});

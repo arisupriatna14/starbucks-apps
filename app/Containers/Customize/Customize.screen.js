@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 import { Transition } from 'react-navigation-fluid-transitions';
 import get from 'lodash/get';
+import PropTypes from 'prop-types';
 
 import { StylesGlobal } from '../../Themes/StyleGlobal';
 import { Images } from '../../Themes/Images';
@@ -99,8 +100,15 @@ class Customize extends Component {
           </View>
         </View>
       </View>
-    )
+    );
   }
 }
 
 export default Customize;
+
+Customize.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+    goBack: PropTypes.func
+  })
+};

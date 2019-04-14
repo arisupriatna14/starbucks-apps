@@ -13,10 +13,10 @@ const Styles = {
     width: deviceWidth,
     ...Platform.select({
       ios: {
-        height: isIphoneX() ? 80 : 75,
+        height: isIphoneX() ? 80 : 75
       },
       android: {
-        height: 60,
+        height: 60
       }
     }),
     backgroundColor: Colors.SALEM,
@@ -30,7 +30,7 @@ const Styles = {
         top: isIphoneX() ? 15 : 5
       },
       android: {
-        top: 0,
+        top: 0
       }
     }),
     left: 5

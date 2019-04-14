@@ -15,15 +15,22 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 
-const Button = (props) => (
+const Button = ({
+  styleButton,
+  onPress,
+  styleTitle,
+  title,
+  sourceBtnImage,
+  styleBtnImage
+}) => (
   <TouchableOpacity
-    style={props.styleButton}
-    onPress={props.onPress}
+    style={styleButton}
+    onPress={onPress}
   >
-    <Text style={props.styleTitle}>{props.title}</Text>
+    <Text style={styleTitle}>{title}</Text>
     <Image
-      source={props.sourceBtnImage}
-      style={props.styleBtnImage}
+      source={sourceBtnImage}
+      style={styleBtnImage}
     />
   </TouchableOpacity>
 );
