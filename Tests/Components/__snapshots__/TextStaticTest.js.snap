@@ -4,7 +4,7 @@ exports[`TextStatic component renders correctly if text and styleText is set 1`]
 <Text
   style={
     Object {
-      "color": "#fff",
+      "color": "#ffffff",
     }
   }
 >
@@ -12,7 +12,13 @@ exports[`TextStatic component renders correctly if text and styleText is set 1`]
 </Text>
 `;
 
-exports[`TextStatic component renders correctly if text prop is set 1`] = `
+exports[`TextStatic component renders correctly if text prop is number 1`] = `
+<Text>
+  100
+</Text>
+`;
+
+exports[`TextStatic component renders correctly if text prop is string 1`] = `
 <Text>
   Hello world
 </Text>
