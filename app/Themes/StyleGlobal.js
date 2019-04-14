@@ -44,6 +44,9 @@ const StylesGlobal = {
   marginRight: value => ({
     marginRight: value
   }),
+  margin: value => ({
+    margin: value
+  }),
   top: value => ({
     top: value
   }),
