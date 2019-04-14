@@ -6,7 +6,8 @@ const Images = {
   icBagBlack: require('../Assets/Images/ic_bag_black.png'),
   icBagWhite: require('../Assets/Images/ic_bag_white.png'),
   icSearch: require('../Assets/Images/ic_search.png'),
-  icBack: require('../Assets/Images/ic_back.png')
+  icBack: require('../Assets/Images/ic_back.png'),
+  coffeeBag: require('../Assets/Images/ic_coffe_bag.png')
 }
 
 export { Images };
