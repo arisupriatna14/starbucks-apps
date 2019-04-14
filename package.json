@@ -19,7 +19,12 @@
     "react": "16.8.3",
     "react-native": "0.59.2",
     "react-native-gesture-handler": "^1.1.0",
+    "react-native-material-textfield": "^0.12.0",
+    "react-native-modal": "^9.0.0",
+    "react-native-otp-inputs": "^2.0.1",
     "react-native-scripts": "^2.0.1",
+    "react-native-slider": "^0.11.0",
+    "react-native-timer-countdown": "^4.1.0",
     "react-navigation": "^3.5.1",
     "react-navigation-fluid-transitions": "^0.3.1"
   },
