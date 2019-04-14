@@ -12,5 +12,8 @@ export default TextStatic;
 
 TextStatic.propTypes = {
   styleText: PropTypes.instanceOf(Object),
-  text: PropTypes.string
+  text: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ])
 };
