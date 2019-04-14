@@ -37,7 +37,8 @@ Button.propTypes = {
   title: PropTypes.string,
   sourceBtnImage: PropTypes.oneOfType([
     PropTypes.number,
-    PropTypes.string
+    PropTypes.string,
+    PropTypes.object
   ]),
   styleBtnImage: PropTypes.instanceOf(Object)
 };
