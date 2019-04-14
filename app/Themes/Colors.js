@@ -4,7 +4,8 @@ const Colors = {
   WHITE: '#ffffff',
   SALEM: '#088f4a',
   SAFFRON: '#f1c63f',
-  BLACK: '#000000'
+  BLACK: '#000000',
+  TUNDORA: '#414141'
 };
 
 export { Colors };
