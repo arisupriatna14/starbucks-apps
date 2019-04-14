@@ -5,6 +5,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import { Transition } from 'react-navigation-fluid-transitions';
+import get from 'lodash/get';
 
 import { StylesGlobal } from '../../Themes/StyleGlobal';
 import { Images } from '../../Themes/Images';
@@ -22,10 +23,19 @@ class Customize extends Component {
     navigation.goBack();
   }
 
+  navigateToScreen = (item) => () => {
+    const { navigation } = this.props;
+    navigation.navigate('CustomizeCoffe', { item });
+  }
+
   render() {
     const { navigation } = this.props;
-    const shared = navigation.state.params.shared;
-    const image = navigation.state.params.image;
+    const shared = get(navigation, 'state.params.item.shared', '');
+    const image = get(navigation, 'state.params.item.image', '');
+    const nameCoffee = get(navigation, 'state.params.item.name', '');
+    const priceCoffee = get(navigation, 'state.params.item.price');
+    const items = get(navigation, 'state.params.item', {});
+
     return (
       <View style={Styles.container}>
         <View style={Styles.containerHeader}>
@@ -49,7 +59,7 @@ class Customize extends Component {
               </TouchableOpacity>
               <Transition appear="left">
                 <TextStatic
-                  text="Chocolate Frappuccino"
+                  text={nameCoffee}
                   styleText={Styles.textTitle}
                 />
               </Transition>
@@ -65,17 +75,19 @@ class Customize extends Component {
               </Transition>
               <Transition appear="right">
                 <TextStatic
-                  text="$4.50"
+                  text={`$${priceCoffee}`}
                   styleText={Styles.textPrice}
                 />
               </Transition>
               <View style={Styles.rowCenter}>
-                <View style={Styles.btnContainer(100, 25, 0)}>
-                  <TextStatic
-                    text="CUSTOMISE"
-                    styleText={Styles.btnTitle}
-                  />
-                </View>
+                <TouchableOpacity onPress={this.navigateToScreen(items)}>
+                  <View style={Styles.btnContainer(100, 25, 0)}>
+                    <TextStatic
+                      text="CUSTOMISE"
+                      styleText={Styles.btnTitle}
+                    />
+                  </View>
+                </TouchableOpacity>
                 <View style={Styles.btnContainer(25, 25, 8)}>
                   <Image
                     source={Images.icBagBlack}
