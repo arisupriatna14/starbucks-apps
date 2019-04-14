@@ -20,33 +20,35 @@ class Home extends Component {
     this.state = {
       data: [{
         name: 'Chocolate Frappuccino',
-        price: '$4.50',
+        price: 4.50,
         image: Images.icCoffeThree,
         shared: 'chocolateFrappuccino'
       }, {
         name: 'Tea Frappuccino',
-        price: '$4.50',
+        price: 5.50,
         image: Images.icCoffeOne,
         shared: 'teaFrappuccino'
       }, {
         name: 'Strawberry Frappuccino',
-        price: '$4.50',
+        price: 6.50,
         image: Images.icCoffeTwo,
         shared: 'strawberryFrappuccino'
       }]
     };
   }
 
-  navigateToScreen = (image, shared) => () => {
+  navigateToScreen = (item) => () => {
     const { navigation } = this.props;
-    navigation.navigate('Customize', { image, shared })
+    navigation.navigate('Customize', { item })
   }
 
   renderItem = ({ item, index }) => {
     return (
       <View style={Styles.containerCard} key={index}>
         <View style={StylesGlobal.marginHorizontal(16)}>
-          <TouchableOpacity onPress={this.navigateToScreen(item.image, item.shared)}>
+          <TouchableOpacity
+            onPress={this.navigateToScreen(item)}
+          >
             <Transition appear="left" delay shared={item.shared}>
               <Image
                 source={item.image}
@@ -68,7 +70,7 @@ class Home extends Component {
           <View style={StylesGlobal.marginTop(24)}>
             <Transition appear="right">
               <TextStatic
-                text={item.price}
+                text={`$${item.price}`}
                 styleText={Styles.textItemPrice}
               />
             </Transition>
